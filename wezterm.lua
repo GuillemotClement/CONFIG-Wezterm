@@ -14,7 +14,15 @@ config.keys = {
 	{ key = "l", mods = "CTRL", action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }) },
 }
 
-config.initial_cols = 160
-config.initial_rows = 160
+config.initial_cols = 200
+config.initial_rows = 80
+
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	pane:split({
+		direction = "Bottom",
+		size = 0.2,
+	})
+end)
 
 return config
