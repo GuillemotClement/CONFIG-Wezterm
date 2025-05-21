@@ -13,3 +13,7 @@ Ne pas utiliser de fichier cacher.
 ## Font
 
 Recuperer la font Fira Code pour pouvoir l'utiliser avec cette configuration.
+
+## Ressource 
+
+- [WezTerm](https://wezterm.org/)
