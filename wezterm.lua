@@ -16,17 +16,5 @@ config.keys = {
 	{ key = "k", mods = "CTRL", action = wezterm.action.SendKey({ key = "k", mods = "CTRL" }) },
 	{ key = "l", mods = "CTRL", action = wezterm.action.SendKey({ key = "l", mods = "CTRL" }) },
 }
--- taille par defaut du terminal
-config.initial_cols = 200
-config.initial_rows = 80
-
--- split le terminal haut/bas
-wezterm.on("gui-startup", function(cmd)
-	local tab, pane, window = mux.spawn_window(cmd or {})
-	pane:split({
-		direction = "Bottom",
-		size = 0.2,
-	})
-end)
 
 return config
